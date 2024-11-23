@@ -4,8 +4,9 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 import type { DocumentContext } from 'next/document';
 
 const MyDocument = () => (
-    <Html lang="en">
+    <Html lang="zh-CN">
         <Head />
+        <meta name="baidu-site-verification" content="codeva-dVM1xBZYqm" />
         <body className='overflow-x-hidden'>
             <Main />
             <NextScript />
