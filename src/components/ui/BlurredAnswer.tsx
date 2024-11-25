@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Button } from 'antd';
+import { Button } from '@/components/ui/button';
 import styles from './BlurredAnswer.module.css';
+import { MailOpen } from "lucide-react"
 
 interface BlurredAnswerProps {
     children: React.ReactNode;
@@ -20,6 +21,7 @@ const BlurredAnswer: React.FC<BlurredAnswerProps> = ({ children }) => {
                         onClick={() => setIsBlurred(false)}
                         className={styles.button}
                     >
+                        <MailOpen />
                         显示答案
                     </Button>
                 </div>

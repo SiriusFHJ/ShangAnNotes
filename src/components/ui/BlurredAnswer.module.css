@@ -17,12 +17,19 @@
     align-items: center;
     justify-content: center;
   }
-  
+
+
   .button {
-    background-color: #3b82f6;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;          /* gap-2 */
+    align-items: center;   /* items-center */
+    justify-content: center; /* justify-center */
   }
-  
+
   .button:hover {
-    background-color: #2563eb;
-    color: white;
+    background-color: black; /* hover:bg-blue-400 */
+    color: white; /* hover:text-white */
+    border-radius: 0.25rem;  /* rounded-lg */
   }
