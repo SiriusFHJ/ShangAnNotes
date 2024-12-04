@@ -1,7 +1,11 @@
 {
-  "introduction": "概述",
-  "summary":"概括题",
-  "analyze": "分析理解题",
-  "words": "规范词",
-  "objective": "客观题"
+  "introduction": "申论概述",
+  "single": "单一题",
+  "multiple": "综合题",
+  "application": "应用文",
+  "write": "大作文",
+  "words": "申论规范词",
+  "skills": "申论解题技巧",
+  "template": "申论作文模板",
+  "qa": "申论常见问题问答"
 }
