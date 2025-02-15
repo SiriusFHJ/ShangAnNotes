@@ -6,6 +6,7 @@
     }
   },
   "prepare": "考前须知",
+  "analysis": "国考考情分析",
   "experience": "大神经验",
   "memory": "行测必背",
   "common": "常识判断",
@@ -14,25 +15,8 @@
   "judgment": "判断推理",
   "material": "资料分析",
   "essay": "申论学习",
-  "sample": "申论范文",
-  "hot": "时政热点",
-  "comment": "人民时评",
-  "practice": {
-    "title": "行测精练 ↗",
-    "type": "page",
-    "href": "https://www.gongkaoshangan.com/",
-    "newWindow": true
-  },
-  "rush": {
-    "title": "申论批改",
-    "type": "page",
-    "href": "https://www.gongkaoshangan.com/",
-    "newWindow": true
-  },
-  "speed": {
-    "title": "速算练习",
-    "type": "page",
-    "href": "https://www.gongkaoshangan.com/",
-    "newWindow": true
-  }
+  "article": "申论范文",
+  "policy": "时政热点",
+  "interview": "面试101",
+  "interview-structure": "结构化面试必会题型"
 }
