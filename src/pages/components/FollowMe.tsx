@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import myQRCode from 'public/opentecher002.avif';
+import myQRCode from 'public/qrcode.png';
 import payQRCode from "public/code.avif";
 import styles from './FollowMe.module.css';
 
@@ -14,9 +14,9 @@ export default function FollowMe() {
                     width={200}
                     height={200}
                 />
-                <p className={styles.text}>扫码备注「<b>上岸学堂</b>」<br />免费获取上岸学堂打印版资料</p>
+                <p className={styles.text}>微信扫码获取DeepSeek专属公考私教和10000+优质考公资料</p>
             </div>
-            <div className={`${styles.column} ${styles.columnRight}`}>
+            {/* <div className={`${styles.column} ${styles.columnRight}`}>
                 <Image
                     src={payQRCode}
                     className={styles.image}
@@ -25,7 +25,7 @@ export default function FollowMe() {
                     height={200}
                 />
                 <p className={styles.text}>免费不易，且行且珍惜<br />打赏支持一下吧！</p>
-            </div>
+            </div> */}
         </div>
     </>
 }
