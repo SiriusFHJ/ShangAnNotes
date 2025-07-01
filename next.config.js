@@ -19,5 +19,24 @@ module.exports = withNextra({
         'react-intersection-observer',
         '@ant-design/pro-editor',
         '@ant-design/pro-components'
-    ]
+    ],
+    // 配置静态文件访问，支持微信校验文件
+    async headers() {
+        return [
+            {
+                // 匹配所有.txt文件（微信校验文件）
+                source: '/(.*).txt',
+                headers: [
+                    {
+                        key: 'Content-Type',
+                        value: 'text/plain; charset=utf-8',
+                    },
+                    {
+                        key: 'Cache-Control',
+                        value: 'no-cache, no-store, must-revalidate',
+                    },
+                ],
+            },
+        ]
+    }
 })

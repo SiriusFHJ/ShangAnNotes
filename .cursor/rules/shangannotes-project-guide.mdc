@@ -1,0 +1,79 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# ShangAnNotes (尚安笔记) - Chinese Civil Service Exam Study Guide
+
+## Project Overview
+This is a comprehensive study repository for Chinese civil service exams (公务员考试), covering both 行测 (Administrative Aptitude Test) and 申论 (Essay Writing) components. The repository serves as both a study guide and a Next.js web application for interactive learning.
+
+## Repository Structure
+
+### Core Study Materials
+- **[0.考前须知/](mdc:0.考前须知)** - Pre-exam essential knowledge including exam requirements, job selection guidance, and study plans
+- **[1.行测必背/](mdc:1.行测必背)** - Essential memorization content for 行测, including idioms, terminology, and synonym analysis
+- **[3.常识判断/](mdc:3.常识判断)** - General knowledge sections covering:
+  - **[1.法律法规/](mdc:3.常识判断/1.法律法规)** - Legal knowledge (Civil Law, Criminal Law, Constitutional Law, Administrative Law)
+  - **[2.经济常识/](mdc:3.常识判断/2.经济常识)** - Economic knowledge (Macro/Microeconomics, International Economics)
+  - **[4.科技常识/](mdc:3.常识判断/4.科技常识)** - Technology and science knowledge
+  - **[5.人文历史/](mdc:3.常识判断/5.人文历史)** - Humanities and history
+  - **[6.地理国情/](mdc:3.常识判断/6.地理国情)** - Geography and national conditions
+
+### 行测 (Administrative Aptitude Test) Sections
+- **[4.言语理解与表达/](mdc:4.言语理解与表达)** - Language comprehension and expression
+- **[5.数量关系/](mdc:5.数量关系)** - Quantitative relationships and mathematical problems
+- **[6.判断推理/](mdc:6.判断推理)** - Judgment and reasoning (analogical, definitional, graphical, logical)
+- **[7.资料分析/](mdc:7.资料分析)** - Data analysis skills and techniques
+
+### Web Application
+- **[src/](mdc:src)** - Next.js application source code
+- **[src/pages/](mdc:src/pages)** - Page components mirroring the study material structure
+- **[src/components/](mdc:src/components)** - Reusable UI components including quiz components
+- **[theme.config.tsx](mdc:theme.config.tsx)** - Nextra theme configuration
+
+### Additional Resources
+- **[经验分享/](mdc:经验分享)** - User experience sharing and study strategies
+- **[mindmap/](mdc:mindmap)** - Mind maps for visual learning
+- **[prompts/](mdc:prompts)** - AI prompts for different exam sections
+
+## Content Organization Principles
+
+### File Naming Convention
+- Numbered prefixes indicate study sequence (e.g., `1.`, `2.`, `3.`)
+- Chinese names reflect the official exam terminology
+- `.md` files contain study content, `.mdx` files are for the web interface
+
+### Content Structure
+Each major section follows a consistent pattern:
+1. **基础知识** (Basic Knowledge) - Fundamental concepts
+2. **解题技巧** (Problem-solving Techniques) - Methods and strategies
+3. **常见题型** (Common Question Types) - Typical exam questions
+4. **实战练习** (Practice Exercises) - Hands-on practice
+
+### Key Configuration Files
+- **[components.json](mdc:components.json)** - UI component configuration
+- **[next.config.js](mdc:next.config.js)** - Next.js configuration
+- **[tailwind.config.ts](mdc:tailwind.config.ts)** - Tailwind CSS configuration
+
+## Expert Context
+This repository is maintained by a Chinese civil service exam expert with 10+ years of teaching experience, specializing in:
+- 行测 (Administrative Aptitude Test) question types
+- 申论 (Essay Writing) techniques
+- Government document writing
+- Logical analysis and mathematical problem solving
+
+## Working Guidelines
+- Content should maintain academic rigor appropriate for civil service exam preparation
+- All materials should align with current Chinese civil service exam standards
+- Mathematical formulas and problem-solving methods should be clearly explained
+- Legal knowledge should reflect current Chinese law
+- Language exercises should focus on precision and formal expression
+
+## File References for Common Tasks
+- For exam structure overview: **[2.试题分布.md](mdc:0.考前须知/2.试题分布.md)**
+- For study planning: **[9.3个月省考上岸计划.md](mdc:0.考前须知/9.3个月省考上岸计划.md)**
+- For mathematical techniques: **[1.解题技巧/](mdc:5.数量关系/1.解题技巧)**
+- For legal knowledge: **[1.法律法规/](mdc:3.常识判断/1.法律法规)**
+- For web interface: **[src/pages/](mdc:src/pages)**
+

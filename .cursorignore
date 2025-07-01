@@ -50,7 +50,7 @@ build
 .cursorignore
 
 # public
-public
+# public
 
 # others
 .gitignore
