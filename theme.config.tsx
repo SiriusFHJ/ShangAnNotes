@@ -36,10 +36,10 @@ const config: DocsThemeConfig = {
         />
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', margin: '10px 10px' }}>上岸学堂</h2>
     </>,
-    project: {
-        link: 'https://github.com/SiriusFHJ/ShangAnNotes',
-    },
-    docsRepositoryBase: 'https://www.gongkaoshangan.com/',
+    // project: {
+    //     link: 'https://github.com/SiriusFHJ/ShangAnNotes',
+    // },
+    docsRepositoryBase: 'https://www.asyncook.com/',
     search: {
         placeholder: '搜索文档',
     },
