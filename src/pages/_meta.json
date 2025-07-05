@@ -1,6 +1,6 @@
 {
   "index": {
-    "title": "介绍",
+    "title": "公考知识库介绍",
     "theme": {
       "breadcrumb": false
     }
@@ -8,7 +8,7 @@
   "prepare": "考前须知",
   "analysis": "国考考情分析",
   "experience": "大神经验",
-  "memory": "行测必背",
+  "memory": "行测必背知识库",
   "politics": "政治理论",
   "common": "常识判断",
   "language": "言语理解与表达",

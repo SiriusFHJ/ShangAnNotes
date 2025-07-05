@@ -11,12 +11,12 @@ const metaTags = (
         <link rel="icon" type="image/webp" href="/favicon.webp" />
         <meta
             name="description"
-            content="最全面最容易上手的的考公教程"
+            content="最全面最容易上手的公考知识库和考公教程"
         />
-        <meta name="keywords" content="公考 考公 考公教育 公务员考试 公务员考试题库 公务员考试培训课程 资料分析 行测 申论 面试 常识 言语理解 数量关系 判断推理 资料分析 资料分析技巧 资料分析公式 资料分析速算 资料分析技巧 资料分析公式 资料分析速算" />
+        <meta name="keywords" content="公考知识库 公考 考公 考公教育 公务员考试 公务员考试题库 公务员考试培训课程 资料分析 行测 申论 面试 常识 言语理解 数量关系 判断推理 资料分析 资料分析技巧 资料分析公式 资料分析速算 资料分析技巧 资料分析公式 资料分析速算" />
         <meta property="og:title" content="上岸学堂-格物智源Tech" />
         <meta property="og:description"
-            content="上岸学堂，一个助力于使用最先进的AI技术帮助广大同学考试上岸的网站，提供行测、申论、面试等全方位的学习资源。" />
+            content="上岸学堂，一个助力于使用最先进的AI技术帮助广大同学考试上岸的公考知识库网站，提供行测、申论、面试等全方位的学习资源。" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="上岸学堂-格物智源Tech" />
         <meta property="og:image" content="/chapter0-dashboard.avif" />
@@ -77,7 +77,7 @@ const config: DocsThemeConfig = {
 
         const defaultSeo = {
             titleTemplate: "%s - 上岸学堂 - 格物智源Tech",
-            description: "公务员事业编上岸指南, AI行测申论辅导",
+            description: "公务员事业编上岸指南, AI行测申论辅导, 公考知识库",
             openGraph: {
                 type: 'website',
                 locale: 'zh_CN',
@@ -94,7 +94,7 @@ const config: DocsThemeConfig = {
             additionalMetaTags: [
                 {
                     name: 'keywords',
-                    content: frontMatter.keywords || '公考, 考公教育, 公务员考试, 资料分析, 行测, 申论'
+                    content: frontMatter.keywords || '公考知识库, 公考, 考公教育, 公务员考试, 资料分析, 行测, 申论'
                 },
                 {
                     name: 'author',
