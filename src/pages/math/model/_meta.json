@@ -1,5 +1,6 @@
 {
     "engineering": "工程问题",
+    "solution": "溶液问题",
     "trip": "行程问题",
     "tree": "植树问题",
     "matrix": "方阵问题",
@@ -9,7 +10,6 @@
     "boat": "过河问题",
     "game": "博弈问题",
     "profit": "经济利润问题",
-    "solution": "溶液问题",
     "permutation": "排列组合",
     "probability": "概率问题",
     "exclusion": "容斥原理",
