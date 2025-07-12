@@ -1,9 +1,9 @@
 {
+    "line": "线段法",
     "substitution": "代入排除法",
-    "number": "数字特性法",
-    "proportional": "比例法",
-    "equation": "方程法",
-    "indefinite": "不定方程",
     "assign": "赋值法",
-    "line": "线段法"
+    "proportional": "比例法",
+    "number": "数字特性法",
+    "equation": "方程法",
+    "indefinite": "不定方程法"
 }

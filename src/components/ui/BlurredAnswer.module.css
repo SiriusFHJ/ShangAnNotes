@@ -1,35 +1,33 @@
 .container {
-    position: relative;
-  }
-  
-  .content {
-    transition: all 300ms;
-  }
-  
-  .blurred {
-    filter: blur(12px);
-  }
-  
-  .overlay {
-    position: absolute;
-    inset: 0;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(240 5.9% 90%);
+    margin: 1rem 0;
+}
+
+.button {
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: center;
-  }
+    justify-content: flex-start;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    font-weight: 500;
+}
 
+.button:hover {
+    background-color: hsl(240 4.8% 95.9%);
+}
 
-  .button {
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;          /* gap-2 */
-    align-items: center;   /* items-center */
-    justify-content: center; /* justify-center */
-  }
+.icon {
+    transition: transform 0.2s ease-in-out;
+}
 
-  .button:hover {
-    background-color: black; /* hover:bg-blue-400 */
-    color: white; /* hover:text-white */
-    border-radius: 0.25rem;  /* rounded-lg */
-  }
+.icon.open {
+    transform: rotate(180deg);
+}
+
+.content {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid hsl(240 5.9% 90%);
+    background-color: hsl(240 5% 96.1% / 0.5);
+}
