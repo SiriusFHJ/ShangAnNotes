@@ -5,6 +5,7 @@ keywords: 过河问题,数量关系,上岸学堂,行测,数量关系
 ---
 
 import BlurredAnswer from '@/components/ui/BlurredAnswer';
+import FollowMe from '@/components/FollowMe';
 
 # 过河问题
 
@@ -134,3 +135,4 @@ $$ \text{天数} = \lceil \frac{20 - 5}{5 - 3} \rceil + 1 = \lceil \frac{15}{2} 
 3.  **向上取整**：在计算循环次数 `(M-N)/(N-1)` 时，如果结果不是整数，<span style={{color:'orange'}}>必须向上取整</span>。因为哪怕只剩下1个人，也需要启动一次完整的“来回”流程。
 4.  **识别变型**：如“青蛙跳井”、“工人搬货上楼（搬上去又空手下来）”等问题，都可以转化为过河模型求解。关键是找出 `M`（总任务量）、`N`（单次前进量）和 `N-1`（净完成量）。
 
+<FollowMe />
