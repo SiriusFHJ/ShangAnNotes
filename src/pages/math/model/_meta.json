@@ -14,11 +14,11 @@
     "matrix": "方阵问题",
     "bottle": "空瓶换酒",
     "balance": "天平问题",
+    "battle": "比赛问题",
     "scissors": "剪绳问题",
     "boat": "过河问题",
     "game": "博弈问题",
-    "time": "时间问题",
-    "drawer": "抽屉原理",
+    "time": "年龄问题",
     "scheduling": "统筹规划",
     "chicken": "鸡兔同笼",
     "count": "计数杂题"

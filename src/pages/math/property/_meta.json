@@ -1,0 +1,7 @@
+{
+    "divisible": "倍数整除",
+    "factor-remainder": "约数和余数",
+    "square-pythagorean": "平方数和勾股数",
+    "prime-composite": "质数合数",
+    "gcd-lcm": "最大公约数和最小公倍数"
+}
