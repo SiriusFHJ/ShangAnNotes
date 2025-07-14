@@ -1,11 +1,10 @@
 {
     "basic": "基础数列",
-    "product": "作商数列",
-    "power": "幂次数列",
-    "fraction": "分数数列",
-    "mechanical": "机械划分数列",
     "multiple": "多重数列",
-    "matrix": "图形数阵",
+    "fraction": "分数数列",
+    "power": "幂次数列",
     "multiple-level": "多级数列",
-    "recursive": "递推数列"
+    "recursive": "递推数列",
+    "mechanical": "机械划分数列",
+    "matrix": "图形数阵"
 }

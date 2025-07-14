@@ -12,10 +12,10 @@ const FollowMe = () => {
                 />
                 <div className={styles.textContainer}>
                     <h4 className={styles.title}>
-                        🎯 扫码体验小程序
+                        🎯 扫码练一练
                     </h4>
                     <p className={styles.description}>
-                        AI刷题 自由打印
+                        AI刷题，天下无敌；上岸在手，编制我有！
                     </p>
                 </div>
             </div>
