@@ -1,5 +1,13 @@
 {
-    "outline":"概述",
-    "simple-sentence-skill":"集合逻辑关系",
-    "complex-sentence-skill":"语义拆分关系"
+    "outline": "概述",
+    "semantic": "语义关系-近义反义",
+    "metaphor": "语义关系-比喻象征义",
+    "same": "逻辑关系-全同关系",
+    "parallel": "逻辑关系-并列关系",
+    "cross": "逻辑关系-交叉关系",
+    "include": "逻辑关系-包容关系",
+    "logical-relation": "逻辑关系-对应关系",
+    "function": "逻辑关系-功能关系",
+    "syntax": "语法关系",
+    "split": "拆分思维"
 }
