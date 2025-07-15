@@ -1,4 +1,7 @@
 {
-    "outline":"概述",
-    "skills":"技巧讲解"
+    "outline": "概述",
+    "objects": "单定义-主客体",
+    "sentence-analysis": "单定义-句式分析",
+    "multiple": "多定义",
+    "split-words": "拆词技巧"
 }
