@@ -2,6 +2,8 @@
     "basic": "概述",
     "analogical": "类比推理",
     "definition": "定义判断",
-    "logic": "逻辑判断",
+    "translation": "翻译推理",
+    "combination": "组合排列",
+    "logic": "逻辑论证",
     "graph": "图形推理"
 }

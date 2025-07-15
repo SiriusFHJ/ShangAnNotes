@@ -1,0 +1,7 @@
+{
+    "forward": "前推后",
+    "backward": "后推前",
+    "inverse": "逆否等价",
+    "and": "且和或",
+    "demorgan": "德摩根定律"
+}

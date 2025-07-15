@@ -1,8 +1,6 @@
 {
-    "outline": "概述",
-    "translation-reasoning": "翻译推理",
-    "permutation-combination": "排列组合",
-    "daily-conclusion": "日常结论",
-    "boost-weaken": "加强削弱",
-    "truth-false-reasoning": "真假推理"
+    "strengthen": "加强",
+    "weaken": "削弱",
+    "reason": "原因解释",
+    "truth": "真假推理"
 }
