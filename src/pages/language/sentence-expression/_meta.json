@@ -1,5 +1,10 @@
 {
-    "sentence-order": "语句排序题",
-    "sentence-blank": "语句填空题",
+    "sentence-order-first": "语句排序题-确定首句",
+    "sentence-order-bind": "语句排序题-确定捆绑",
+    "sentence-order-order": "语句排序题-确定顺序",
+    "sentence-order-last": "语句排序题-确定尾句",
+    "sentence-blank-beginning": "语句填空题-横线在开头",
+    "sentence-blank-middle": "语句填空题-横线在中间",
+    "sentence-blank-ending": "语句填空题-横线在结尾",
     "sentence-choice": "接语选择题"
 }

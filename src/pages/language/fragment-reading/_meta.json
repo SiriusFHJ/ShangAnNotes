@@ -1,5 +1,10 @@
 {
-    "center-understanding": "中心理解题型",
+    "center-understanding-turn": "中心理解题-转折关系",
+    "center-understanding-cause": "中心理解题-因果关系",
+    "center-understanding-necessary-condition": "中心理解题-必要条件关系",
+    "center-understanding-parallel": "中心理解题-并列关系",
+    "center-understanding-topic": "中心理解题-主题词",
+    "center-understanding-structure": "中心理解题-行文脉络",
     "title-insertion": "标题填入题",
     "detail-judgment": "细节判断题",
     "word-sentence-comprehension": "词句理解题"

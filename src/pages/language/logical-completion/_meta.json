@@ -1,4 +1,11 @@
 {
-    "word-analysis": "词语辨析",
-    "context-analysis": "语境分析"
+    "word-analysis-meaning": "词的辨析-词义侧重",
+    "word-analysis-object": "词的辨析-搭配对象",
+    "word-analysis-emotion": "词的辨析-感情色彩",
+    "word-analysis-degree": "词的辨析-程度轻重",
+    "context-analysis-turn": "语境分析-转折关系",
+    "context-analysis-cause": "语境分析-因果关系",
+    "context-analysis-parallel": "语境分析-并列关系",
+    "context-analysis-contrast": "语境分析-对应关系",
+    "context-analysis-expansion": "语境分析-解释关系"
 }

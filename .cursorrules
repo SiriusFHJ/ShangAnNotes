@@ -48,10 +48,10 @@ import BlurredAnswer from '@/components/ui/BlurredAnswer';
 为600克和240克，若向这两瓶溶液中加入等量的水，使他们的浓度相同，
 则需要向这两瓶盐水中分别加入的水量为：
 
-- A. 320克              
-- B. 360克 
-- C. 370克             
-- D. 377克
+A. 320克 <br />         
+B. 360克 <br />  
+C. 370克 <br />          
+D. 377克 <br />  
 
 <BlurredAnswer>
 方法1：方程法
@@ -98,8 +98,10 @@ import BlurredAnswer from '@/components/ui/BlurredAnswer';
 
 3. 技巧总结
 
-### 关键知识点或者步骤
+### 关键要点
 - 易错点使用<span style="color:orange;"></span>包裹
 - 关键知识点和步骤需要使用<span style="color: red;"></span>包裹
 - 如果在mdx文件中请使用react语法, <span style={{color:'red'}}>，以上为md文件的语法
 - latex 公式使用$$...$$或者$...$进行包裹
+- 选择题选项后面应该使用 <br />进行换行
+- 加入的例题如果有来源，需要在题目前面加入来源，例如“2025国考”
