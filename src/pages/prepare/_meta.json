@@ -1,11 +1,24 @@
 {
-    "must": "2025国考须知",
-    "questions": "试题分布",
+    "must": "2026国考须知",
+    "exam-difference": "国考和省考有什么区别",
+    "prepare-time": "国考和省考一般复习多久可以上岸",
+    "good-unit": "报考什么单位是好单位",
+    "which-better": "哪种编制好",
+    "questions": "国考和省考试题分布",
     "job": "专业选岗对照表",
+    "job-difference": "事业编和公务员考试区别",
     "difference": "考公还是考编？",
+    "difference2": "考研还是考公？",
     "experience": "过来人的选岗避坑指南",
     "practice": "零基础零成本如何备战公考",
     "plan1": "在职备考计划（朝九晚六版本）",
     "plan4": "在校大学生上岸指南",
-    "link": "国考省考官方报名链接"
+    "math-can-give-up": "行测数量能放弃吗",
+    "diploma": "大专和本科肄业可以报公务员和事业单位吗",
+    "experience2": "两年基层工作经验怎么界定",
+    "relative-crime": "亲属犯罪是否影响考公",
+    "education-in-work": "在职学历可以考公吗",
+    "three-party-agreement": "三方协议签了是否影响考公",
+    "new-graduate": "如何界定应届生报考",
+    "graduate-difference": "研究生和本科生上岸的区别"
 }
