@@ -5,6 +5,12 @@
       "breadcrumb": false
     }
   },
+  "overview": {
+    "title": "知识概览",
+    "theme": {
+      "breadcrumb": false
+    }
+  },
   "prepare": "考前须知",
   "analysis": "国考考情分析",
   "experience": "大神经验",
