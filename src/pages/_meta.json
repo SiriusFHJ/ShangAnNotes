@@ -1,6 +1,6 @@
 {
   "index": {
-    "title": "上岸学堂 - 考公考编学习手册",
+    "title": "上岸学堂 - 考公考编知识手册",
     "theme": {
       "breadcrumb": false
     }
@@ -14,12 +14,12 @@
   "prepare": "考前须知",
   "analysis": "国考考情分析",
   "experience": "大神经验",
-  "memory": "行测必背",
-  "politics": "政治理论",
-  "language": "言语理解与表达",
-  "math": "数量关系",
-  "judgment": "判断推理",
   "material": "资料分析",
+  "language": "言语理解与表达",
+  "judgment": "判断推理",
+  "math": "数量关系",
+  "politics": "政治理论",
+  "memory": "行测必背",
   "essay": "申论学习",
   "common": "公基常识",
   "article": "申论范文",

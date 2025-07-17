@@ -1,10 +1,7 @@
 {
-    "base-period": "基期定义及公式",
-    "current-period": "现期定义及公式",
+    "base-period": "基期",
+    "current-period": "现期",
     "interval-base": "间隔基期",
-    "growth-rate": "增长率与倍数",
-    "multiplier": "成数&番数",
-    "change-magnitude": "增幅&降幅&变化幅度",
-    "comparison": "同比&环比",
-    "percentage": "百分数&百分点"
+    "growth-rate": "增长率",
+    "growth-number": "增长量"
 }
