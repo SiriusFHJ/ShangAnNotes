@@ -4,8 +4,10 @@
   "description": "公务员事业编上岸指南",
   "scripts": {
     "dev": "next dev -p 5000",
-    "build": "NODE_OPTIONS='--max-old-space-size=8096 --max-semi-space-size=1024' next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=3072 --max-semi-space-size=1024' next build",
     "build:memory-optimized": "NODE_OPTIONS='--max-old-space-size=1024 --max-semi-space-size=512 --optimize-for-size' next build",
+    "build:hobby": "NODE_OPTIONS='--max-old-space-size=800 --max-semi-space-size=256 --optimize-for-size --max-executable-size=1000' next build",
+    "build:incremental": "NODE_OPTIONS='--max-old-space-size=2048 --max-semi-space-size=512' next build --experimental-build-mode=compile",
     "start": "next start",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",

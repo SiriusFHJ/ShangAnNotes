@@ -1,0 +1,23 @@
+{
+    "build": {
+        "env": {
+            "VERCEL_BUILD_SYSTEM_REPORT": "1",
+            "NODE_OPTIONS": "--max-old-space-size=3072 --max-semi-space-size=1024",
+            "NEXT_TELEMETRY_DISABLED": "1"
+        }
+    },
+    "functions": {
+        "src/pages/api/**/*.{js,ts}": {
+            "maxDuration": 30
+        }
+    },
+    "buildCommand": "pnpm run build",
+    "outputDirectory": ".next",
+    "framework": "nextjs",
+    "installCommand": "npm ci --prefer-offline --no-audit",
+    "regions": [
+        "hkg1",
+        "hnd1",
+        "icn1"
+    ]
+}

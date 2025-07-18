@@ -3,6 +3,8 @@ const withNextra = require('nextra')({
     themeConfig: './theme.config.tsx',
     latex: true,
     normalizeSlashes: true, // 自动修正路径中的重复斜杠
+    defaultShowCopyCode: true,
+    readingTime: true,
 })
 
 
@@ -22,11 +24,11 @@ module.exports = withNextra({
     ],
     // 构建优化配置
     webpack: (config, { isServer }) => {
-        // 增加构建内存限制和优化
+        // 内存优化的代码分割
         config.optimization.splitChunks = {
             chunks: 'all',
             minSize: 20000,
-            maxSize: 244000,
+            maxSize: 200000, // 降低到200KB
             cacheGroups: {
                 default: {
                     minChunks: 2,
@@ -37,19 +39,26 @@ module.exports = withNextra({
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10,
                     reuseExistingChunk: true,
-                    maxSize: 244000,
+                    maxSize: 200000,
                 },
                 antd: {
                     test: /[\\/]node_modules[\\/]antd[\\/]/,
                     priority: 10,
                     reuseExistingChunk: true,
-                    maxSize: 244000,
+                    maxSize: 200000,
                 },
                 react: {
                     test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
                     priority: 10,
                     reuseExistingChunk: true,
-                    maxSize: 244000,
+                    maxSize: 200000,
+                },
+                // 分离大型内容页面
+                pages: {
+                    test: /[\\/]src[\\/]pages[\\/]/,
+                    priority: 5,
+                    reuseExistingChunk: true,
+                    maxSize: 150000,
                 },
             },
         }
@@ -64,9 +73,19 @@ module.exports = withNextra({
             }
         }
 
-        // 优化构建性能
+        // 优化构建性能和内存
         config.optimization.usedExports = true
         config.optimization.sideEffects = false
+
+        // 限制并发处理
+        config.optimization.minimize = true
+        config.optimization.minimizer = config.optimization.minimizer || []
+
+        // 内存优化
+        config.resolve.symlinks = false
+        config.watchOptions = {
+            ignored: ['**/node_modules/**', '**/.next/**']
+        }
 
         return config
     },
@@ -77,9 +96,15 @@ module.exports = withNextra({
         },
         optimizeCss: true,
         swcMinify: true,
+        // 启用增量构建
+        incrementalCacheHandlerPath: require.resolve('next/dist/server/lib/incremental-cache'),
     },
     // 输出配置优化
     output: 'standalone',
+    // 页面优化
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+    // 压缩配置
+    compress: true,
     // 配置静态文件访问，支持微信校验文件
     async headers() {
         return [
