@@ -20,6 +20,43 @@ module.exports = withNextra({
         '@ant-design/pro-editor',
         '@ant-design/pro-components'
     ],
+    // 构建优化配置
+    webpack: (config, { isServer }) => {
+        // 增加构建内存限制
+        config.optimization.splitChunks = {
+            chunks: 'all',
+            cacheGroups: {
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                    reuseExistingChunk: true,
+                },
+            },
+        }
+
+        // 减少内存使用
+        if (!isServer) {
+            config.resolve.fallback = {
+                ...config.resolve.fallback,
+                fs: false,
+                net: false,
+                tls: false,
+            }
+        }
+
+        return config
+    },
+    // 启用构建缓存
+    experimental: {
+        turbo: {
+            memoryLimit: 8192,
+        },
+    },
     // 配置静态文件访问，支持微信校验文件
     async headers() {
         return [
