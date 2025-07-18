@@ -22,9 +22,11 @@ module.exports = withNextra({
     ],
     // 构建优化配置
     webpack: (config, { isServer }) => {
-        // 增加构建内存限制
+        // 增加构建内存限制和优化
         config.optimization.splitChunks = {
             chunks: 'all',
+            minSize: 20000,
+            maxSize: 244000,
             cacheGroups: {
                 default: {
                     minChunks: 2,
@@ -35,6 +37,19 @@ module.exports = withNextra({
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10,
                     reuseExistingChunk: true,
+                    maxSize: 244000,
+                },
+                antd: {
+                    test: /[\\/]node_modules[\\/]antd[\\/]/,
+                    priority: 10,
+                    reuseExistingChunk: true,
+                    maxSize: 244000,
+                },
+                react: {
+                    test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+                    priority: 10,
+                    reuseExistingChunk: true,
+                    maxSize: 244000,
                 },
             },
         }
@@ -49,14 +64,22 @@ module.exports = withNextra({
             }
         }
 
+        // 优化构建性能
+        config.optimization.usedExports = true
+        config.optimization.sideEffects = false
+
         return config
     },
-    // 启用构建缓存
+    // 启用构建缓存和内存优化
     experimental: {
         turbo: {
-            memoryLimit: 8192,
+            memoryLimit: 3072,
         },
+        optimizeCss: true,
+        swcMinify: true,
     },
+    // 输出配置优化
+    output: 'standalone',
     // 配置静态文件访问，支持微信校验文件
     async headers() {
         return [

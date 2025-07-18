@@ -4,7 +4,8 @@
   "description": "公务员事业编上岸指南",
   "scripts": {
     "dev": "next dev -p 5000",
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=3072 --max-semi-space-size=1024' next build",
+    "build:memory-optimized": "NODE_OPTIONS='--max-old-space-size=1024 --max-semi-space-size=512 --optimize-for-size' next build",
     "start": "next start",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
@@ -62,7 +63,6 @@
     "nextra-theme-docs": "2.13.4",
     "node-html-to-image": "^5.0.0",
     "openai": "^4.56.0",
-    "puppeteer": "^23.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-infinite-scroll-component": "^6.1.0",
@@ -85,6 +85,7 @@
     "daisyui": "^4.12.10",
     "next-transpile-modules": "^10.0.1",
     "postcss": "^8.4.41",
+    "puppeteer": "^23.9.0",
     "tailwindcss": "^3.4.10",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
