@@ -54,7 +54,7 @@ build
 
 # others
 .gitignore
-package.json
-tsconfig.json
+# package.json
+# tsconfig.json
 pnpm-lock.yaml
 .npmrc
