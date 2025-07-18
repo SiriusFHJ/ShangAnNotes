@@ -4,7 +4,7 @@
   "description": "公务员事业编上岸指南",
   "scripts": {
     "dev": "next dev -p 5000",
-    "build": "NODE_OPTIONS='--max-old-space-size=3072 --max-semi-space-size=1024' next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=8096 --max-semi-space-size=1024' next build",
     "build:memory-optimized": "NODE_OPTIONS='--max-old-space-size=1024 --max-semi-space-size=512 --optimize-for-size' next build",
     "start": "next start",
     "pages:build": "npx @cloudflare/next-on-pages",
