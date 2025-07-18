@@ -28,6 +28,7 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 ## 🗂️ 内容导航
 
 ### 🎯 考前须知
+
 - [2026国考须知](/prepare/must) - 最新考试政策解读
 - [国考和省考有什么区别](/prepare/exam-difference) - 考试类型对比
 - [国考和省考一般复习多久可以上岸](/prepare/prepare-time) - 备考时间规划
@@ -40,25 +41,31 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [更多考前须知...](/prepare)
 
 ### 📝 言语理解与表达
+
 **片段阅读**
+
 - [中心理解题-因果关系](/language/fragment-reading/center-understanding-cause)
 - [中心理解题-转折关系](/language/fragment-reading/center-understanding-turn)
 - [标题填入题](/language/fragment-reading/title-insertion)
 - [细节判断题](/language/fragment-reading/detail-judgment)
 
 **逻辑填空**
+
 - [语境分析-因果关系](/language/logical-completion/context-analysis-cause)
 - [语境分析-转折关系](/language/logical-completion/context-analysis-contrast)
 - [词语辨析-对象搭配](/language/logical-completion/word-analysis-object)
 - [词语辨析-含义侧重](/language/logical-completion/word-analysis-meaning)
 
 **语句表达**
+
 - [语句排序题-排序技巧](/language/sentence-expression/sentence-order-order)
 - [语句填空题-首句填空](/language/sentence-expression/sentence-blank-beginning)
 - [接语选择题](/language/sentence-expression/sentence-choice)
 
 ### 🏛️ 政治理论
+
 **马克思主义原理**
+
 - [马克思主义-导论](/politics/marxist/1-marxist-intro)
 - [马克思主义哲学-辩证唯物论](/politics/marxist/2-marxist-philosophy-dialectical-materialism-1)
 - [马克思主义哲学-唯物辩证法](/politics/marxist/3-marxist-philosophy-materialist-dialectics-1)
@@ -66,17 +73,21 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [马克思主义哲学-唯物史观](/politics/marxist/5-marxist-philosophy-historical-materialism-1)
 
 **习近平新时代中国特色社会主义思想**
+
 - [导论](/politics/new-thought/1-introduction)
 - [新时代坚持和发展中国特色社会主义](/politics/new-thought/2-new-era-socialism-with-chinese-characteristics)
 - [以中国式现代化全面推进中华民族伟大复兴](/politics/new-thought/3-chinese-modernization-great-rejuvenation)
 - [全面深化改革开放](/politics/new-thought/5-comprehensive-deepening-reform-opening)
 
 **百年党史**
+
 - [中共党史大事件](/politics/party-history/party-history-event-1)
 - [党史中的伟大精神](/politics/party-history/great-spirit-1)
 
 ### 🔍 判断推理
+
 **类比推理**
+
 - [概述](/judgment/analogical/outline)
 - [语义关系](/judgment/analogical/semantic)
 - [逻辑关系](/judgment/analogical/logical-relation)
@@ -84,23 +95,28 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [包含关系](/judgment/analogical/include)
 
 **定义判断**
+
 - [概述](/judgment/definition/outline)
 - [多定义判断](/judgment/definition/multiple)
 - [关键词拆分](/judgment/definition/split-words)
 
 **逻辑推理**
+
 - [加强题型](/judgment/logic/strengthen)
 - [削弱题型](/judgment/logic/weaken)
 - [推理题型](/judgment/logic/reason)
 
 **图形推理**
+
 - [图形推理通用技巧](/judgment/graph/common)
 - [线条专题](/judgment/graph/line)
 - [点面专题](/judgment/graph/dot)
 - [黑白块专题](/judgment/graph/black)
 
 ### 🧮 数量关系
+
 **解题技巧**
+
 - [线段法](/math/skill/line) - 高效解题神器
 - [代入排除法](/math/skill/substitution) - 快速验证答案
 - [赋值法](/math/skill/assign) - 化繁为简
@@ -109,12 +125,14 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [方程法](/math/skill/equation) - 经典解题方法
 
 **数学性质**
+
 - [倍数整除](/math/property/divisible)
 - [约数和余数](/math/property/factor-remainder)
 - [平方数和勾股数](/math/property/square-pythagorean)
 - [质数合数](/math/property/prime-composite)
 
 **数学模型**
+
 - [工程问题](/math/model/engineering) - 工作效率经典题型
 - [溶液问题](/math/model/solution) - 浓度混合问题
 - [行程问题](/math/model/trip) - 相遇追击问题
@@ -125,17 +143,20 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [最值问题](/math/model/maximum) - 最值求解
 
 **数列推理**
+
 - [基础数列](/math/number/basic) - 等差等比数列
 - [多重数列](/math/number/multiple) - 复合数列
 - [分数数列](/math/number/fraction) - 分数规律
 - [幂次数列](/math/number/power) - 指数幂次
 
 ### 📚 行测必背
+
 - [常考成语手册](/memory/literally) - 高频成语汇总
 - [常考名词俗语](/memory/idiom) - 名词术语解释
 - [常考近义词语辨析300组](/memory/word-analysis-1) - 词语辨析精选
 
 ### 📄 资料分析
+
 - [基础知识](/material/basic) - 资料分析入门
 - [速算技巧](/material/calculate/addition-subtraction) - 快速计算方法
 - [增长问题](/material/growth) - 增长率计算
@@ -143,6 +164,7 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 - [核心公式](/material/core) - 必记公式汇总
 
 ### 📝 申论备考
+
 - [申论介绍](/essay/introduction) - 申论考试概述
 - [单一题](/essay/single/introduction) - 单一题型解析
 - [综合题](/essay/multiple/introduction) - 综合分析题
@@ -152,81 +174,49 @@ ShangAnNotes 是一个专注于**中国公务员考试**的备考资料库，涵
 ## 🛠️ 使用指南
 
 ### 在线阅读
+
 访问我们的在线文档站点，获得最佳的阅读体验。
-
-### 本地部署
-```bash
-# 克隆项目
-git clone https://github.com/your-username/ShangAnNotes.git
-
-# 进入项目目录
-cd ShangAnNotes
-
-# 安装依赖
-npm install
-
-# 启动开发服务器
-npm run dev
-```
-
-### 内容结构
-```
-ShangAnNotes/
-├── src/pages/           # 主要内容页面
-│   ├── common/         # 常识判断
-│   ├── language/       # 言语理解与表达
-│   ├── judgment/       # 判断推理
-│   ├── math/           # 数量关系
-│   ├── material/       # 资料分析
-│   ├── essay/          # 申论
-│   └── politics/       # 政治理论
-├── components/         # 自定义组件
-└── public/            # 静态资源
-```
 
 ## 🎯 学习建议
 
 ### 📅 备考时间线
+
 - **基础阶段**（1-2个月）：系统学习各模块基础知识
 - **强化阶段**（1-2个月）：大量练习，掌握解题技巧
 - **冲刺阶段**（2-4周）：模拟考试，查漏补缺
 
 ### 📖 学习方法
+
 1. **理论先行**：先理解概念和原理
 2. **大量练习**：通过练习巩固知识点
 3. **总结归纳**：定期整理错题和心得
 4. **模拟实战**：严格按照考试时间练习
 
 ### 💡 重点提示
+
 - 数量关系可适当放弃，但基础题型要掌握
 - 言语理解重在语感培养和技巧运用
 - 判断推理注重逻辑思维训练
 - 资料分析是提分关键，必须重点突破
 
+## ✨ 小程序
+
+扫描下方二维码，进入小程序，即可体验知识库配合 AI 刷题的强大功能！
+
+<p align="center">
+  <img src="/public/qrcode.png" alt="小程序二维码" width="200"/>
+</p>
+
+---
+
 ## 🤝 贡献指南
 
 我们欢迎所有形式的贡献，包括但不限于：
+
 - 📝 内容补充和完善
 - 🐛 错误修正
 - 💡 新题型和解法
 - 🎨 界面和体验优化
-
-### 提交方式
-1. Fork 本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建 Pull Request
-
-## 📞 联系我们
-
-- 📧 邮箱：contact@shanganotes.com
-- 💬 微信群：扫描二维码加入学习群
-- 🐛 问题反馈：[Issues](https://github.com/your-username/ShangAnNotes/issues)
-
-## 📜 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ---
 
@@ -237,4 +227,3 @@ ShangAnNotes/
 <p align="center">
   祝愿所有考生都能顺利上岸！🎉
 </p>
-
