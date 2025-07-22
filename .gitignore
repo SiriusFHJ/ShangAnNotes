@@ -49,3 +49,5 @@ build
 .cursorrules
 
 prompts/
+
+*.zip
