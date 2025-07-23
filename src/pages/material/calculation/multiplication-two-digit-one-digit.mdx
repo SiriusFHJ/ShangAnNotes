@@ -1,0 +1,263 @@
+import BlurredAnswer from '@/components/ui/BlurredAnswer';
+
+# 两位数乘一位数：化乘为加
+
+## 核心概念
+
+### 什么是"化乘为加"？
+
+"化乘为加"是一种<span style={{color:'red'}}>将复杂乘法运算转化为简单加法运算</span>的速算技巧。这个方法的核心思想是利用<span style={{color:'blue'}}>乘法分配律</span>，将两位数拆分成十位和个位分别计算，然后相加得到最终结果。
+
+### 数学原理推导
+
+让我们用一个生活中的例子来理解这个原理：
+
+**例子**：小明去超市买苹果，苹果每斤3元，他买了24斤，需要付多少钱？
+
+我们可以这样思考：
+- 24斤 = 20斤 + 4斤
+- 20斤苹果的钱 = 20 × 3 = 60元
+- 4斤苹果的钱 = 4 × 3 = 12元
+- 总共需要付：60 + 12 = 72元
+
+这个过程用数学公式表示就是：
+
+$$24 \times 3 = (20 + 4) \times 3 = 20 \times 3 + 4 \times 3 = 60 + 12 = 72$$
+
+### 通用公式推导
+
+对于任意两位数乘一位数的情况，设两位数为$(10a + b)$，一位数为$c$，其中：
+- $a$是十位数字（1-9）
+- $b$是个位数字（0-9）
+- $c$是一位数乘数（1-9）
+
+根据<span style={{color:'red'}}>乘法分配律</span>：
+
+$$
+\begin{align}
+(10a + b) \times c &= 10a \times c + b \times c \\
+&= a \times c \times 10 + b \times c
+\end{align}
+$$
+
+这就是我们的<span style={{color:'purple'}}>核心公式</span>：
+
+> **十位先乘、结果添0；个位再乘；最后把两个结果相加。**
+
+### 计算步骤详解
+
+<div style={{backgroundColor: '#f0f8ff', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>标准计算流程：</h4>
+<ol>
+<li><strong>第一步</strong>：识别十位数字和个位数字</li>
+<li><strong>第二步</strong>：十位数字 × 乘数，结果后添0</li>
+<li><strong>第三步</strong>：个位数字 × 乘数</li>
+<li><strong>第四步</strong>：将两个结果相加</li>
+</ol>
+</div>
+
+## 真题讲解
+
+### 主题一：基础两位数乘一位数
+
+**例1**：计算 $32 \times 4$
+
+<div style={{border: '2px solid #4CAF50', padding: '15px', borderRadius: '10px', margin: '15px 0'}}>
+<h4>计算过程图解：</h4>
+<table style={{width: '100%', borderCollapse: 'collapse'}}>
+<tr style={{backgroundColor: '#e8f5e8'}}>
+<td style={{border: '1px solid #ccc', padding: '8px', textAlign: 'center'}}><strong>步骤</strong></td>
+<td style={{border: '1px solid #ccc', padding: '8px', textAlign: 'center'}}><strong>计算</strong></td>
+<td style={{border: '1px solid #ccc', padding: '8px', textAlign: 'center'}}><strong>结果</strong></td>
+</tr>
+<tr>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>第一步：拆分</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>32 = 30 + 2</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>十位：3，个位：2</td>
+</tr>
+<tr>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>第二步：十位乘法</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>3 × 4 = 12 → 120</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>120</td>
+</tr>
+<tr>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>第三步：个位乘法</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>2 × 4 = 8</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>8</td>
+</tr>
+<tr>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>第四步：相加</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>120 + 8 = 128</td>
+<td style={{border: '1px solid #ccc', padding: '8px'}}>128</td>
+</tr>
+</table>
+</div>
+
+<BlurredAnswer>
+**详细解析：**
+
+1. **识别数字**：32中，十位数字是3，个位数字是2
+2. **十位计算**：3 × 4 = 12，因为是十位，所以结果是120
+3. **个位计算**：2 × 4 = 8
+4. **最终相加**：120 + 8 = 128
+
+**答案：128**
+</BlurredAnswer>
+
+**例2**：计算 $67 \times 5$
+
+<BlurredAnswer>
+**解题步骤：**
+
+1. **第一步**：拆分67 = 60 + 7，十位数字6，个位数字7
+2. **第二步**：十位乘法：6 × 5 = 30 → 300
+3. **第三步**：个位乘法：7 × 5 = 35
+4. **第四步**：相加：300 + 35 = 335
+
+**答案：335**
+</BlurredAnswer>
+
+### 主题二：含进位的两位数乘一位数
+
+**例3**：计算 $48 \times 7$
+
+<div style={{backgroundColor: '#fff3cd', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<p><strong>注意：</strong>这类题目的<span style={{color:'orange'}}>易错点</span>在于个位乘法结果可能是两位数，需要特别注意进位处理。</p>
+</div>
+
+<BlurredAnswer>
+**详细解析：**
+
+1. **第一步**：拆分48 = 40 + 8，十位数字4，个位数字8
+2. **第二步**：十位乘法：4 × 7 = 28 → 280
+3. **第三步**：个位乘法：8 × 7 = 56（注意这里是两位数）
+4. **第四步**：相加：280 + 56 = 336
+
+**关键提醒**：当个位乘法结果≥10时，直接加到前面的结果即可，不需要单独处理进位。
+
+**答案：336**
+</BlurredAnswer>
+
+**例4**：计算 $59 \times 6$
+
+<BlurredAnswer>
+**解题步骤：**
+
+1. **第一步**：拆分59 = 50 + 9，十位数字5，个位数字9
+2. **第二步**：十位乘法：5 × 6 = 30 → 300
+3. **第三步**：个位乘法：9 × 6 = 54
+4. **第四步**：相加：300 + 54 = 354
+
+**答案：354**
+</BlurredAnswer>
+
+### 主题三：特殊数字的快速计算
+
+**例5**：计算 $25 \times 8$
+
+<div style={{backgroundColor: '#e1f5fe', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<p><strong>技巧提示：</strong>遇到25×4的倍数时，可以利用<span style={{color:'blue'}}>25×4=100</span>的特性进行快速计算。</p>
+</div>
+
+<BlurredAnswer>
+**方法一：标准化乘为加**
+1. 拆分25 = 20 + 5
+2. 十位乘法：2 × 8 = 16 → 160
+3. 个位乘法：5 × 8 = 40
+4. 相加：160 + 40 = 200
+
+**方法二：特殊技巧**
+1. 观察：8 = 4 × 2
+2. 计算：25 × 8 = 25 × 4 × 2 = 100 × 2 = 200
+
+**答案：200**
+</BlurredAnswer>
+
+**例6**：计算 $15 \times 6$
+
+<BlurredAnswer>
+**解题步骤：**
+
+1. **第一步**：拆分15 = 10 + 5，十位数字1，个位数字5
+2. **第二步**：十位乘法：1 × 6 = 6 → 60
+3. **第三步**：个位乘法：5 × 6 = 30
+4. **第四步**：相加：60 + 30 = 90
+
+**答案：90**
+</BlurredAnswer>
+
+### 主题四：综合练习题
+
+**例7**：计算 $73 \times 9$
+
+<BlurredAnswer>
+**解题步骤：**
+
+1. **第一步**：拆分73 = 70 + 3，十位数字7，个位数字3
+2. **第二步**：十位乘法：7 × 9 = 63 → 630
+3. **第三步**：个位乘法：3 × 9 = 27
+4. **第四步**：相加：630 + 27 = 657
+
+**答案：657**
+</BlurredAnswer>
+
+**例8**：计算 $86 \times 4$
+
+<BlurredAnswer>
+**解题步骤：**
+
+1. **第一步**：拆分86 = 80 + 6，十位数字8，个位数字6
+2. **第二步**：十位乘法：8 × 4 = 32 → 320
+3. **第三步**：个位乘法：6 × 4 = 24
+4. **第四步**：相加：320 + 24 = 344
+
+**答案：344**
+</BlurredAnswer>
+
+## 技巧总结
+
+### 核心要点
+
+<div style={{backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '10px', margin: '15px 0'}}>
+<h4>🎯 四步法则：</h4>
+<ol>
+<li><strong>拆数</strong>：把两位数看成"十位×10 + 个位"</li>
+<li><strong>先十位</strong>：十位数字×乘数，结果后面加0</li>
+<li><strong>再个位</strong>：个位数字×乘数</li>
+<li><strong>相加</strong>：把两部分相加，注意进位</li>
+</ol>
+</div>
+
+### 常见易错点
+
+<div style={{backgroundColor: '#ffebee', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>⚠️ 注意事项：</h4>
+<ul>
+<li><span style={{color:'orange'}}>个位乘法结果可能是两位数</span>，不要慌张，直接加到十位乘法结果上</li>
+<li><span style={{color:'orange'}}>十位乘法后要记得添0</span>，这代表的是几十而不是几</li>
+<li><span style={{color:'orange'}}>最后相加时要仔细</span>，避免计算错误</li>
+</ul>
+</div>
+
+### 速算技巧
+
+<div style={{backgroundColor: '#e8f5e8', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>🚀 提速技巧：</h4>
+<ul>
+<li><strong>25×4的倍数</strong>：利用25×4=100进行快速计算</li>
+<li><strong>个位是5的数</strong>：×偶数时，结果个位必为0</li>
+<li><strong>熟记小九九</strong>：提高基础乘法速度</li>
+<li><strong>心算练习</strong>：多练习两位数加法，提高相加速度</li>
+</ul>
+</div>
+
+### 练习建议
+
+1. **基础练习**：从简单的两位数×一位数开始，如12×3、23×4等
+2. **进阶练习**：练习含进位的题目，如48×7、59×6等
+3. **综合练习**：混合练习各种类型，提高熟练度
+4. **限时练习**：设定时间限制，提高计算速度
+
+<div style={{backgroundColor: '#fff3e0', padding: '15px', borderRadius: '8px', margin: '15px 0'}}>
+<p><strong>记住：</strong>"化乘为加"不是神奇技巧，而是<span style={{color:'red'}}>乘法分配律的直接应用</span>。理解了原理，就能灵活运用，大大提高计算速度和准确率！</p>
+</div>

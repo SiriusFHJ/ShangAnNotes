@@ -1,0 +1,352 @@
+import BlurredAnswer from '@/components/ui/BlurredAnswer';
+
+# 高位叠加法
+
+## 一、核心概念
+
+高位叠加法是一种用于多位数加减法的速算技巧。其核心思想是从左到右，即从高位到低位逐位进行计算，并同步处理进位或借位。这种方法可以帮助你快速锁定答案范围，甚至直接得到精确结果，在公务员考试等时间紧张的场景下非常实用。
+
+### 1. 加法运算
+
+让我们通过一个生活中的例子来理解高位叠加法在加法中的应用。
+
+**场景：** 假设你和朋友这个月分别花了156元和287元在零食上，你想快速计算一下两人总共的开销。
+
+**传统计算（列竖式）：**
+
+```
+  156
++ 287
+-----
+  443
+```
+
+这种方法需要从右往左计算，并且需要注意进位，比较繁琐。
+
+**高位叠加法：从左到右的进行计算**
+
+以计算 $156 + 287$ 为例，过程如下：
+
+<div style={{
+  border: '1px solid #ccc',
+  borderRadius: '8px',
+  padding: '16px',
+  fontFamily: 'monospace',
+  display: 'inline-block',
+  width: '100%',
+}}>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>1</div>
+    <div style={{ padding: '4px 8px' }}>5</div>
+    <div style={{ padding: '4px 8px' }}>6</div>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>+</div>
+    <div style={{ padding: '4px 8px' }}>2</div>
+    <div style={{ padding: '4px 8px' }}>8</div>
+    <div style={{ padding: '4px 8px' }}>7</div>
+  </div>
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* Step 1: 百位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px', color: 'red' }}>3</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (百位: 1+2=3)</div>
+  </div>
+
+  {/* Step 2: 十位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'blue' }}>1</div>
+    <div style={{ padding: '4px 8px', color: 'blue' }}>3</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (十位: 5+8=13)</div>
+  </div>
+
+  {/* Step 3: 个位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'green' }}>1</div>
+    <div style={{ padding: '4px 8px', color: 'green' }}>3</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (个位: 6+7=13)</div>
+  </div>
+
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* 最终结果 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>4</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>4</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>3</div>
+  </div>
+</div>
+
+这个过程可以简化为：
+
+-   <span style={{color:'red'}}>**百位**</span>：$1+2=3$，结果记为 `3`
+-   <span style={{color:'blue'}}>**十位**</span>：$5+8=13$，将 `1` 叠加到百位 `3` 上，变为 `4`，十位留 `3`，结果变为 `43`
+-   <span style={{color:'green'}}>**个位**</span>：$6+7=13$，将 `1` 叠加到十位 `3` 上，变为 `4`，个位留 `3`，结果变为 `443`
+
+最终结果就是 **443**。
+
+### 2. 减法运算：从左到右进行计算
+
+减法运算的逻辑类似，只是需要处理的是借位。
+
+**场景：** 你这个月有482元预算，已经花了167元，你想快速计算一下还剩多少钱。
+
+我们的目标是计算 $482 - 167$。
+
+<div style={{
+  border: '1px solid #ccc',
+  borderRadius: '8px',
+  padding: '16px',
+  fontFamily: 'monospace',
+  display: 'inline-block',
+  width: '100%',
+  marginBottom: '16px'
+}}>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>4</div>
+    <div style={{ padding: '4px 8px' }}>8</div>
+    <div style={{ padding: '4px 8px' }}>2</div>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>-</div>
+    <div style={{ padding: '4px 8px' }}>1</div>
+    <div style={{ padding: '4px 8px' }}>6</div>
+    <div style={{ padding: '4px 8px' }}>7</div>
+  </div>
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* Step 1: 百位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px', color: 'red' }}>3</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (百位: 4-1=3)</div>
+  </div>
+
+  {/* Step 2: 十位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'blue' }}>2</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (十位: 8-6=2)</div>
+  </div>
+
+  {/* Step 3: 个位借位 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'orange', textDecoration: 'line-through' }}>2</div>
+    <div style={{ padding: '4px 8px', color: 'orange' }}>1</div>
+    <div style={{ padding: '4px 8px', color: 'green' }}>5</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (个位: 12-7=5, 十位借位)</div>
+  </div>
+
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* 最终结果 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>3</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>1</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>5</div>
+  </div>
+</div>
+
+这个过程可以分解为：
+
+1.  <span style={{color:'red'}}>**百位计算：**</span> $4 - 1 = 3$。我们得到一个基准值 **300**。
+2.  <span style={{color:'blue'}}>**十位计算：**</span> $8 - 6 = 2$。没有发生借位，此时结果更新为 $300 + 20 = 320$。
+3.  <span style={{color:'green'}}>**个位计算：**</span> $2 - 7 = -5$。这里需要向十位借位。个位的结果变为 $12 - 7 = 5$。而十位因为被借走1，所以需要减去10。最终结果为 $320 - 10 + 5 = 315$。
+
+在口算时，这个过程可以简化为：
+
+-   百位：$4-1=3$
+-   十位：$8-6=2$，结果为 $3 | 2$
+-   个位：$2-7$ 不够减，向十位借1，变为 $12-7=5$。十位被借走1，变为 $2-1=1$。结果为 $3 | 1 | 5$。
+
+最终结果就是 **315**。
+
+## 二、真题讲解
+
+### 主题：常规加法
+
+**例1**：计算 $156 + 287 = ？$
+
+A. 443 <br />
+B. 433 <br />
+C. 423 <br />
+D. 413 <br />
+
+<BlurredAnswer>
+**解析：**
+
+1.  **百位叠加**：$1 + 2 = 3$。此时答案的百位是3。
+2.  **十位叠加**：$5 + 8 = 13$。有进位，所以百位要加1，变为4，十位为3。此时答案变为 $43X$。观察选项，只有A符合。
+3.  **个位叠加（验证）**：$6 + 7 = 13$。有进位，所以十位要加1，变为4，个位为3。最终结果为 $443$。
+
+因此，答案为 A。
+</BlurredAnswer>
+
+### 主题：常规减法
+
+**例2**：计算 $482 - 167 = ？$
+
+A. 325 <br />
+B. 315 <br />
+C. 335 <br />
+D. 345 <br />
+
+<BlurredAnswer>
+**解析：**
+
+1.  **百位叠加**：$4 - 1 = 3$。此时答案的百位是3。
+2.  **十位叠加**：$8 - 6 = 2$。没有借位。此时答案变为 $32X$。观察选项，只有A符合。
+3.  **个位叠加（验证）**：$2 - 7$ 不够减，需要向十位借1。个位变为 $12 - 7 = 5$。十位被借走1，变为 $2-1=1$。最终结果为 $315$。
+
+因此，答案为 B。
+</BlurredAnswer>
+
+### 主题：多位数混合运算
+
+**例3**：计算 $1234 + 5678 - 2345 = ？$
+
+A. 4567 <br />
+B. 4557 <br />
+C. 4667 <br />
+D. 4577 <br />
+
+<BlurredAnswer>
+**解析：**
+
+对于混合运算，我们可以将加法和减法分开，逐位计算。
+
+<div style={{
+  border: '1px solid #ccc',
+  borderRadius: '8px',
+  padding: '16px',
+  fontFamily: 'monospace',
+  display: 'inline-block',
+  width: '100%',
+  marginBottom: '16px'
+}}>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>1</div>
+    <div style={{ padding: '4px 8px' }}>2</div>
+    <div style={{ padding: '4px 8px' }}>3</div>
+    <div style={{ padding: '4px 8px' }}>4</div>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>+</div>
+    <div style={{ padding: '4px 8px' }}>5</div>
+    <div style={{ padding: '4px 8px' }}>6</div>
+    <div style={{ padding: '4px 8px' }}>7</div>
+    <div style={{ padding: '4px 8px' }}>8</div>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>-</div>
+    <div style={{ padding: '4px 8px' }}>2</div>
+    <div style={{ padding: '4px 8px' }}>3</div>
+    <div style={{ padding: '4px 8px' }}>4</div>
+    <div style={{ padding: '4px 8px' }}>5</div>
+  </div>
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* 逐位计算过程 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px', color: 'red' }}>4</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (千位: 1+5-2=4)</div>
+  </div>
+
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'blue' }}>5</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (百位: 2+6-3=5)</div>
+  </div>
+
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'green' }}>6</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (十位: 3+7-4=6)</div>
+  </div>
+
+  <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px' }}>&nbsp;</div>
+    <div style={{ padding: '4px 8px', color: 'purple' }}>7</div>
+    <div style={{ padding: '4px 8px', textAlign: 'left', flexGrow: 1, color: '#888' }}> (个位: 4+8-5=7)</div>
+  </div>
+
+  <div style={{ borderTop: '2px solid black', marginBottom: '8px' }}></div>
+
+  {/* 最终结果 */}
+  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>4</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>5</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>6</div>
+    <div style={{ padding: '4px 8px', fontWeight: 'bold' }}>7</div>
+  </div>
+</div>
+
+逐位计算过程：
+
+1.  <span style={{color:'red'}}>**千位**</span>：$1 + 5 - 2 = 4$。基准值为4000。
+2.  <span style={{color:'blue'}}>**百位**</span>：$2 + 6 - 3 = 5$。没有进位或借位。结果更新为 $4000 + 500 = 4500$。
+3.  <span style={{color:'green'}}>**十位**</span>：$3 + 7 - 4 = 6$。没有进位或借位。结果更新为 $4500 + 60 = 4560$。
+4.  <span style={{color:'purple'}}>**个位**</span>：$4 + 8 - 5 = 7$。没有进位或借位。结果更新为 $4560 + 7 = 4567$。
+
+最终结果为 **4567**。
+
+因此，答案为 A。
+</BlurredAnswer>
+
+### 主题：带括号运算
+
+**例4**：计算 $589 - (123 + 234) = ？$
+
+A. 232 <br />
+B. 242 <br />
+C. 222 <br />
+D. 252 <br />
+
+<BlurredAnswer>
+**解析：**
+
+先计算括号内的加法，再进行减法。
+
+**括号内加法：** $123 + 234$
+1.  **百位**：$1 + 2 = 3$。
+2.  **十位**：$2 + 3 = 5$。
+3.  **个位**：$3 + 4 = 7$。
+括号内结果为 **357**。
+
+**减法运算：** $589 - 357$
+1.  **百位**：$5 - 3 = 2$。
+2.  **十位**：$8 - 5 = 3$。
+3.  **个位**：$9 - 7 = 2$。
+最终结果为 **232**。
+
+因此，答案为 A。
+</BlurredAnswer>
+
+## 三、技巧总结
+
+1.  <span style={{color:'green'}}>**从左到右，逐位计算**：</span>这是高位叠加法的核心，与传统计算方式相反，更符合口算习惯。
+2.  <span style={{color:'green'}}>**同步处理进/借位**：</span>在计算下一位时，要立即考虑前一位的进位或借位，这是保证计算准确的关键。
+3.  <span style={{color:'green'}}>**结合选项，提前锁定**：</span>在选择题中，计算出高位后，就可以观察选项，如果只有一个选项符合，即可直接选择，节省时间。
+4.  <span style={{color:'orange'}}>**注意运算顺序**：</span>对于混合运算，要严格遵守先乘除后加减，有括号先算括号的规则。
+5.  <span style={{color:'purple'}}>**勤加练习，形成本能**：</span>速算技巧需要通过大量练习才能熟练掌握，最终形成肌肉记忆和计算直觉。

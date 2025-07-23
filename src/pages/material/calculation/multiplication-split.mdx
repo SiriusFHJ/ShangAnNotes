@@ -1,0 +1,372 @@
+import BlurredAnswer from '@/components/ui/BlurredAnswer';
+
+# 乘法拆分
+
+## 核心概念
+
+### 什么是乘法拆分？
+
+乘法拆分是一种<span style={{color:'red'}}>将复杂乘法运算简化为简单运算</span>的速算技巧。其核心思想是将其中一个乘数拆分为易计算的数之和（或差），再利用乘法分配律简化计算。
+
+### 核心公式推导
+
+让我们用一个生活中的例子来理解乘法拆分的原理：
+
+**例子**：小明去超市买苹果，每个苹果98元，他要买67个苹果，总共需要多少钱？
+
+直接计算 $98 \times 67$ 比较困难，但我们可以这样思考：
+- 98元 = 100元 - 2元
+- 所以买67个苹果的钱 = 67个100元 - 67个2元
+
+这就是乘法拆分的基本思想！
+
+**数学表达**：
+设乘数为 $A$ 和 $B$，将 $A$ 拆分为 $a \pm b$，则：
+
+$$A \times B = (a \pm b) \times B = a \times B \pm b \times B$$
+
+这个公式基于<span style={{color:'red'}}>乘法分配律</span>：$a(b + c) = ab + ac$
+
+### 适用场景识别
+
+1. **首位互补数**：如 $98 = 100 - 2$，$102 = 100 + 2$
+2. **特殊百分数**：如 $15.3\% = 15\% + 0.3\%$
+3. **凑整小数**：如 $4.6 = 5 - 0.4$
+4. **接近特殊数值**：如 $999 = 1000 - 1$
+
+## 真题讲解
+
+### 主题一：整数拆分问题
+
+整数拆分是最常见的乘法拆分类型，通常将接近整十、整百、整千的数进行拆分。
+
+**例1**（2024国考）：
+计算 $97 \times 84$ 的值。
+
+A. 8148 <br />
+B. 8248 <br />
+C. 8348 <br />
+D. 8448 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>识别拆分对象</span>
+- 观察两个数：97和84
+- 97接近100，选择拆分97
+
+第二步：<span style={{color:'red'}}>确定拆分方式</span>
+- $97 = 100 - 3$
+
+第三步：<span style={{color:'red'}}>应用分配律计算</span>
+$$97 \times 84 = (100 - 3) \times 84$$
+$$= 100 \times 84 - 3 \times 84$$
+$$= 8400 - 252$$
+$$= 8148$$
+
+因此，答案为 A. 8148
+
+**技巧总结**：选择接近整百的数进行拆分，可以大幅简化计算过程。
+</BlurredAnswer>
+
+**例2**（2023省考）：
+某工厂生产零件，每天生产102个，连续生产45天，总共生产多少个零件？
+
+A. 4590 <br />
+B. 4680 <br />
+C. 4770 <br />
+D. 4590 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>理解题意</span>
+- 需要计算：$102 \times 45$
+
+第二步：<span style={{color:'red'}}>选择拆分策略</span>
+- 102接近100，拆分102
+- $102 = 100 + 2$
+
+第三步：<span style={{color:'red'}}>分步计算</span>
+$$102 \times 45 = (100 + 2) \times 45$$
+$$= 100 \times 45 + 2 \times 45$$
+$$= 4500 + 90$$
+$$= 4590$$
+
+因此，答案为 A. 4590
+</BlurredAnswer>
+
+### 主题二：百分数拆分问题
+
+百分数拆分常用于增长率、利率等计算中，将复杂百分数拆分为整数部分和小数部分。
+
+**例3**（2024国考）：
+某商品原价1200元，价格上涨6.5%，求上涨后的价格。
+
+A. 1278元 <br />
+B. 1288元 <br />
+C. 1298元 <br />
+D. 1308元 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>确定计算目标</span>
+- 上涨金额 = $1200 \times 6.5\%$
+- 上涨后价格 = 原价 + 上涨金额
+
+第二步：<span style={{color:'red'}}>拆分百分数</span>
+- $6.5\% = 6\% + 0.5\%$
+
+第三步：<span style={{color:'red'}}>分别计算</span>
+$$1200 \times 6.5\% = 1200 \times (6\% + 0.5\%)$$
+$$= 1200 \times 6\% + 1200 \times 0.5\%$$
+$$= 72 + 6 = 78$$
+
+第四步：<span style={{color:'red'}}>得出最终答案</span>
+- 上涨后价格 = $1200 + 78 = 1278$元
+
+因此，答案为 A. 1278元
+</BlurredAnswer>
+
+**例4**（2023省考）：
+某地区人口为85万，年增长率为3.2%，一年后人口为多少万？
+
+A. 87.72万 <br />
+B. 88.72万 <br />
+C. 89.72万 <br />
+D. 90.72万 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>理解增长率计算</span>
+- 一年后人口 = 原人口 × (1 + 增长率)
+- 即：$85 \times (1 + 3.2\%) = 85 \times 1.032$
+
+第二步：<span style={{color:'red'}}>拆分小数</span>
+- $1.032 = 1 + 0.032$
+- 进一步拆分：$0.032 = 0.03 + 0.002$
+
+第三步：<span style={{color:'red'}}>分步计算</span>
+$$85 \times 1.032 = 85 \times (1 + 0.03 + 0.002)$$
+$$= 85 \times 1 + 85 \times 0.03 + 85 \times 0.002$$
+$$= 85 + 2.55 + 0.17$$
+$$= 87.72$$
+
+因此，答案为 A. 87.72万
+</BlurredAnswer>
+
+### 主题三：小数拆分问题
+
+小数拆分适用于含有小数的乘法运算，通过凑整简化计算。
+
+**例5**（2024省考）：
+计算 $4.8 \times 125$ 的值。
+
+A. 600 <br />
+B. 620 <br />
+C. 640 <br />
+D. 660 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>观察数据特点</span>
+- 4.8接近5，125是特殊数（$125 = \frac{1000}{8}$）
+
+第二步：<span style={{color:'red'}}>选择拆分方式</span>
+- $4.8 = 5 - 0.2$
+
+第三步：<span style={{color:'red'}}>应用分配律</span>
+$$4.8 \times 125 = (5 - 0.2) \times 125$$
+$$= 5 \times 125 - 0.2 \times 125$$
+$$= 625 - 25$$
+$$= 600$$
+
+因此，答案为 A. 600
+
+**秒杀技巧**：记住 $125 \times 8 = 1000$，所以 $125 \times 0.2 = 25$
+</BlurredAnswer>
+
+**例6**（2023国考）：
+某商店销售商品，单价为7.6元，销售了350件，总销售额为多少元？
+
+A. 2660元 <br />
+B. 2760元 <br />
+C. 2860元 <br />
+D. 2960元 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>确定计算式</span>
+- 总销售额 = $7.6 \times 350$
+
+第二步：<span style={{color:'red'}}>拆分小数</span>
+- $7.6 = 8 - 0.4$
+
+第三步：<span style={{color:'red'}}>分配律计算</span>
+$$7.6 \times 350 = (8 - 0.4) \times 350$$
+$$= 8 \times 350 - 0.4 \times 350$$
+$$= 2800 - 140$$
+$$= 2660$$
+
+因此，答案为 A. 2660元
+</BlurredAnswer>
+
+### 主题四：复合拆分问题
+
+复合拆分是指同时对两个乘数进行拆分，或者进行多层拆分的复杂情况。
+
+**例7**（2024国考）：
+计算 $98 \times 102$ 的值。
+
+A. 9996 <br />
+B. 10000 <br />
+C. 10004 <br />
+D. 10096 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>识别特殊结构</span>
+- 98和102都接近100
+- $98 = 100 - 2$，$102 = 100 + 2$
+
+第二步：<span style={{color:'red'}}>应用平方差公式</span>
+$$98 \times 102 = (100 - 2) \times (100 + 2)$$
+$$= 100^2 - 2^2$$
+$$= 10000 - 4$$
+$$= 9996$$
+
+因此，答案为 A. 9996
+
+**技巧总结**：当两个数关于某个整数对称时，可以使用平方差公式 $(a-b)(a+b) = a^2 - b^2$
+</BlurredAnswer>
+
+**例8**（2023省考）：
+某工程队修路，第一天修了1.98公里，第二天修了2.02公里，两天共修路多少公里？如果按平均每天的进度，修10天能修多少公里？
+
+A. 20公里 <br />
+B. 40公里 <br />
+C. 60公里 <br />
+D. 80公里 <br />
+
+<BlurredAnswer>
+**解题步骤**：
+
+第一步：<span style={{color:'red'}}>计算两天总进度</span>
+- 两天总进度 = $1.98 + 2.02 = 4$公里
+
+第二步：<span style={{color:'red'}}>计算平均每天进度</span>
+- 平均每天 = $\frac{4}{2} = 2$公里/天
+
+第三步：<span style={{color:'red'}}>计算10天总进度</span>
+- 10天总进度 = $2 \times 10 = 20$公里
+
+因此，答案为 A. 20公里
+
+**注意**：<span style={{color:'orange'}}>这道题虽然涉及小数，但通过观察发现1.98和2.02的和正好是整数4，避免了复杂计算</span>
+</BlurredAnswer>
+
+## 技巧总结
+
+### 拆分原则
+
+1. **就近原则**：选择最接近整十、整百、整千的数进行拆分
+2. **简化原则**：拆分后的计算应该比原计算更简单
+3. **特殊数原则**：优先考虑25、125、625等特殊数的倍数关系
+
+### 常用拆分模式
+
+<div style={{backgroundColor: '#f0f8ff', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>模式一：整数拆分法</h4>
+当 A 接近整十、整百时：<br/>
+$A \times B = (a \pm b) \times B$（其中 $a = 10^n$）<br/>
+<strong>示例</strong>：$98 \times 67 = (100 - 2) \times 67 = 6700 - 134 = 6566$
+</div>
+
+<div style={{backgroundColor: '#f0fff0', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>模式二：百分数拆分法</h4>
+将百分数拆分为整数部分与小数部分：<br/>
+$X \times y\% = X \times (a\% \pm b\%) = X \times a\% \pm X \times b\%$<br/>
+<strong>示例</strong>：$428 \times 6.8\% = 428 \times (7\% - 0.2\%) = 29.96 - 0.856 = 29.104$
+</div>
+
+<div style={{backgroundColor: '#fff8f0', padding: '15px', borderRadius: '8px', margin: '10px 0'}}>
+<h4>模式三：小数拆分法</h4>
+将小数拆分为整数和小数部分：<br/>
+$a.b \times C = (a \pm 0.c) \times C$<br/>
+<strong>示例</strong>：$4.6 \times 25 = (5 - 0.4) \times 25 = 125 - 10 = 115$
+</div>
+
+### 计算过程可视化
+
+以 $97 \times 84$ 为例：
+
+<div style={{border: '2px solid #4CAF50', padding: '20px', borderRadius: '10px', fontFamily: 'monospace'}}>
+<div style={{textAlign: 'center', fontSize: '18px', marginBottom: '15px'}}>
+<strong>97 × 84 的拆分计算过程</strong>
+</div>
+
+<div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
+<div style={{textAlign: 'center'}}>
+<div style={{backgroundColor: '#ffeb3b', padding: '10px', borderRadius: '5px', marginBottom: '10px'}}>
+97 = 100 - 3
+</div>
+<div>↓</div>
+<div style={{backgroundColor: '#e3f2fd', padding: '10px', borderRadius: '5px', marginTop: '10px'}}>
+(100 - 3) × 84
+</div>
+</div>
+
+<div style={{fontSize: '24px', color: '#2196F3'}}>=</div>
+
+<div style={{textAlign: 'center'}}>
+<div style={{backgroundColor: '#c8e6c9', padding: '10px', borderRadius: '5px', marginBottom: '5px'}}>
+100 × 84
+</div>
+<div style={{fontSize: '20px'}}>-</div>
+<div style={{backgroundColor: '#ffcdd2', padding: '10px', borderRadius: '5px', marginTop: '5px'}}>
+3 × 84
+</div>
+</div>
+
+<div style={{fontSize: '24px', color: '#2196F3'}}>=</div>
+
+<div style={{textAlign: 'center'}}>
+<div style={{backgroundColor: '#c8e6c9', padding: '10px', borderRadius: '5px', marginBottom: '5px'}}>
+8400
+</div>
+<div style={{fontSize: '20px'}}>-</div>
+<div style={{backgroundColor: '#ffcdd2', padding: '10px', borderRadius: '5px', marginTop: '5px'}}>
+252
+</div>
+</div>
+
+<div style={{fontSize: '24px', color: '#2196F3'}}>=</div>
+
+<div style={{textAlign: 'center'}}>
+<div style={{backgroundColor: '#4CAF50', color: 'white', padding: '15px', borderRadius: '5px', fontSize: '18px'}}>
+<strong>8148</strong>
+</div>
+</div>
+</div>
+</div>
+
+### 易错点提醒
+
+1. <span style={{color:'orange'}}>符号错误</span>：拆分时要注意加减号的正确使用
+2. <span style={{color:'orange'}}>计算错误</span>：分步计算时要仔细，避免基础运算错误
+3. <span style={{color:'orange'}}>拆分选择</span>：不是所有情况都适合拆分，要判断是否真的简化了计算
+4. <span style={{color:'orange'}}>小数点位置</span>：涉及小数和百分数时要特别注意小数点位置
+
+### 练习建议
+
+1. **熟记特殊数**：25、125、625等与4、8的倍数关系
+2. **多练拆分**：见到接近整数的数要条件反射般想到拆分
+3. **验算习惯**：用估算验证拆分计算的结果是否合理
+4. **灵活运用**：根据具体数字特点选择最优拆分方式
+
+通过大量练习，乘法拆分将成为你在考试中快速准确计算的有力武器！
