@@ -14,6 +14,7 @@
     "frac-direct-divide": "除法-截位直除",
     "frac-equal-scale": "除法-等比缩放法",
     "division-split": "除法-拆分法",
+    "frac-direct-multi": "除法-化除为乘",
     "frac-diff": "分数比较-差分法",
     "division-415": "415份数法"
 }
