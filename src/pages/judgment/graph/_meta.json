@@ -1,7 +1,17 @@
 {
-    "line": "线段专题",
-    "dot": "点面专题",
-    "element": "元素关系",
-    "black": "黑白块专题",
-    "common": "综合专题"
+    "mind": "图推思维",
+    "symmetry": "对称",
+    "stroke-count": "笔画数",
+    "face": "面",
+    "line": "线",
+    "point": "点",
+    "angle": "角",
+    "element": "元素",
+    "position-move": "位置移动",
+    "addition-subtraction-similarity-difference": "加减同异",
+    "black-white-block": "黑白块",
+    "chinese-letter": "汉字字母",
+    "unfolded-figure": "展开图",
+    "section-view": "截面图与视图",
+    "combination": "立体拼合"
 }
