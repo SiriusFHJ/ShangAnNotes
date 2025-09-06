@@ -5,5 +5,8 @@
     "proportional": "比例法",
     "number": "数字特性法",
     "equation": "方程法",
-    "indefinite": "不定方程法"
+    "indefinite": "不定方程法",
+    "permutation": "容斥法和补足法",
+    "dp": "递推/动态规划法",
+    "number-theory": "初等数论入门"
 }
