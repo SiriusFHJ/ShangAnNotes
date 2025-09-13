@@ -48,6 +48,7 @@
     "clsx": "^2.1.1",
     "crypto": "^1.0.1",
     "highlight.js": "^11.10.0",
+    "html2canvas": "^1.4.1",
     "json-server": "1.0.0-beta.2",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
